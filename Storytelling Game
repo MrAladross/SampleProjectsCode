@@ -1,0 +1,57 @@
+using System;
+
+namespace Storytelling_Game
+{
+    class Program
+    {
+        static void Main()
+        {
+            Responses responses = new Responses();
+
+            Console.WriteLine("What is your name?");
+            responses.yourName = Console.ReadLine();
+
+            Console.WriteLine("How many meals do you eat each day?");
+            responses.numericValue1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("How many pets do you have?");
+            responses.numericValue2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("What is your favorite color?");
+            responses.wordValue1 = Console.ReadLine();
+
+            Console.WriteLine("What is your favorite food?");
+            responses.wordValue2 = Console.ReadLine();
+
+            Console.WriteLine("true or false: you ate ice cream yesterday");
+            responses.isTrue1 = bool.Parse(Console.ReadLine());
+
+            Console.WriteLine("true or false: you played football yesterday");
+            responses.isTrue2 = bool.Parse(Console.ReadLine());
+
+            Console.WriteLine(responses.yourName + " is " +
+                responses.numericValue1 + " years old.");
+            Console.WriteLine(responses.yourName + " speak " +
+                            responses.numericValue2 + " language(s).");
+            Console.WriteLine(responses.yourName + " ate a " + responses.wordValue1+
+                " "+responses.wordValue2 + ".");
+
+
+
+            Console.ReadKey();
+        }
+    }
+    public class Responses
+    {
+        public string yourName;
+
+        public int numericValue1;
+        public int numericValue2;
+
+        public string wordValue1;
+        public string wordValue2;
+
+        public bool isTrue1;
+        public bool isTrue2;
+    }
+}
